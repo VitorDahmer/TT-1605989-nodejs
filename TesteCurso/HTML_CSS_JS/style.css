@@ -1,0 +1,47 @@
+body{
+    font-size: medium;
+    font-weight: 300;
+}
+h1{
+    
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: bold;
+    
+}
+header{
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1170px;
+    height: 60px;
+    margin: 0px auto;
+}
+
+nav{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.atual{
+    color: orange;
+    border-bottom:  solid 2px orange;
+}
+
+nav:hover{
+    color: orange;
+    border-bottom:  solid 2px orange;
+}
+
+section{
+    max-width: 1170px;
+    margin: 0px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+}

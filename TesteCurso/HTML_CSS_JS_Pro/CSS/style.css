@@ -1,0 +1,19 @@
+body{
+    font-size: medium;
+    font-weight: 300;
+}
+
+h1{
+    
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+section{
+    max-width: 1170px;
+    margin: 0px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+}

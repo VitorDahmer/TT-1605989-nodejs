@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 
 app.get('/departamentos', (req,res)=>{
-    // nock do resultado uma resposta fake para avaliar
+    // conecta no mysql com os dados do arquivo conection
     con.connect((err)=>{
         if (err) {
             throw err
@@ -33,6 +33,26 @@ app.get('/departamentos', (req,res)=>{
     })
 
     
+})
+
+app.get('/funcionarios', (req, res)=>{
+  con.connect((err)=>{
+    if (err){
+      throw err
+    }
+  })
+
+  con.query(`
+  SELECT nome AS "Nome Completo", 
+	CONCAT("R$ ",FORMAT(salario,2,"DE_DE")) AS Salário, 
+    DATE_FORMAT(dt_nascimento, "%d/%m/%Y") AS "Data de Nascimento" FROM FUNCIONARIOS
+    WHERE genero = "F"
+		AND (nome LIKE "A%" OR nome LIKE"B%") AND (salario >= 2300.50 AND salario <= 3000)
+	ORDER BY nome
+    ;
+  `, (err, result)=>{
+    res.send(result)
+  })
 })
 
 // app.get('departamentos/:idDepartamento', (req,res) => {

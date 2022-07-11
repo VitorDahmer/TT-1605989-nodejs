@@ -1,0 +1,31 @@
+body{
+    font-size: medium;
+    font-weight: 300;
+}
+
+header{
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1170px;
+    height: 60px;
+    margin: 0px auto;
+}
+
+nav{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.atual{
+    color: #ffa500;
+    border-bottom:  solid 2px #ffa500;
+}
+
+nav:hover{
+    color: #ffa500;
+    border-bottom:  solid 2px #ffa500;
+}
