@@ -1,6 +1,7 @@
 import  express  from "express";
 import bodyParser from 'body-parser'
 import con from "./conection.js";
+import cors from 'cors';
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from 'swagger-ui-express';
 
@@ -8,6 +9,7 @@ import swaggerUI from 'swagger-ui-express';
 
 
 const app = express()
+app.use(cors())
 const options = {
   definition: {
     info: {
